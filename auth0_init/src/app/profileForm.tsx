@@ -13,23 +13,23 @@ export default function ProfileForm({ user }: { user: any }) {
     setCompleted(localStorage.getItem("profileCompleted") === "true");
   }, [completed]);
 
-  if (completed) {
-    localStorage.setItem("profileCompleted", "true");
-    return (
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-        <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-          <h1 className="text-3xl font-semibold text-emerald-700 mb-4">Welcome, {user.name}!</h1>
-          <p>Profile submitted! Welcome, {firstName}!</p>;
-          <p className="text-gray-600 mb-6">You're successfully logged in.</p>
-          <a href="/auth/logout">
-            <button className="px-6 py-2 rounded-xl bg-emerald-600 text-white font-medium shadow-md hover:bg-emerald-700 transition-all">
-              Log out
-            </button>
-          </a>
-        </div>
-      </main>
-    );
-  }
+//   if (completed) {
+//     localStorage.setItem("profileCompleted", "true");
+//     return (
+//       <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
+//         <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+//           <h1 className="text-3xl font-semibold text-emerald-700 mb-4">Welcome, {user.name}!</h1>
+//           <p>Profile submitted! Welcome, {firstName}!</p>;
+//           <p className="text-gray-600 mb-6">You're successfully logged in.</p>
+//           <a href="/auth/logout">
+//             <button className="px-6 py-2 rounded-xl bg-emerald-600 text-white font-medium shadow-md hover:bg-emerald-700 transition-all">
+//               Log out
+//             </button>
+//           </a>
+//         </div>
+//       </main>
+//     );
+//   }
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-yellow-50 to-orange-100">
